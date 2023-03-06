@@ -104,3 +104,16 @@
 .custom-login {
     color: red;
 }
+
+.actions{
+    display: flex;
+    align-items: center;
+}
+
+.more-btn{
+    font-size: 2rem;
+    padding: 4px 8px;
+    margin-left: 28px;
+    background: transparent;
+    cursor: pointer;
+}
