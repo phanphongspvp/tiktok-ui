@@ -3,8 +3,9 @@
     align-items: center;
     justify-content: center;
     background-color: var(--white);
-    font-style: 1.6rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 600 !important;
+    font-family: "ProximaNova", sans-serif;
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
@@ -62,11 +63,12 @@
 }
 
 .icon + .title, .title + .icon {
-    margin-left: 8px;    
+    margin-left: 6px;    
 }
 
 .icon {
     display: inline-block;
+    font-size: 2rem;
     width: 20px;
     text-align: center;
 }

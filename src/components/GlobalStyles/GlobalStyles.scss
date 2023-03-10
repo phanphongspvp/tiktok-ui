@@ -1,53 +1,4 @@
 @import "normalize.css";
-
-@font-face {
-  font-family: "SofiaPro";
-  src: url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/sofiapro-bold.woff2)
-      format("woff2"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/sofiapro-bold.woff)
-      format("woff"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/sofiapro-bold.otf)
-      format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ProximaNova";
-  src: url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Regular.woff2)
-      format("woff2"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Regular.woff)
-      format("woff"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Regular.otf)
-      format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ProximaNova";
-  src: url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Semibold.woff2)
-      format("woff2"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Semibold.woff)
-      format("woff"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Semibold.otf)
-      format("opentype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ProximaNova";
-  src: url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Bold.woff2)
-      format("woff2"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Bold.woff)
-      format("woff"),
-  url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/Proxima-Nova-Bold.otf)
-      format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
 :root {
     --primary: #fe2c55;
     --white: #fff;
@@ -57,6 +8,7 @@
     //Default Layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -70,7 +22,6 @@ html {
 }
 
 body {
-    font-family: "SofiaPro", sans-serif;
     font-family: "ProximaNova", sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -85,4 +36,52 @@ button, input, [tabindex] {
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+//Fonts emmbeded
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/Proxima-Nova-Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/ProximaNova-Semibold.woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/Proxima-Nova-Bold.woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url("/assets/fonts/sofiapro-bold.woff2");
+    font-weight: 700;
+}
+
+//Custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
 }
