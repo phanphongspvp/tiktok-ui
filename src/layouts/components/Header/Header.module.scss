@@ -4,10 +4,17 @@
     --search-top-spacer: 9px;
     --search-bottom-width: 52px;
 
-    height: var(--default-layout-header-height);
     display: flex;
     justify-content: center;
+    height: var(--default-layout-header-height);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    margin-bottom: 60px;
+    background: var(--white);
 }
 
 .inner{
@@ -17,6 +24,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--default-layout-horizontal-spacer);
+}
+
+.logo {
+    display: flex;
 }
 
 .custom-login {

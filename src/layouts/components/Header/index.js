@@ -11,17 +11,17 @@ import {
   faSignOut,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
-
 import "tippy.js/dist/tippy.css";
-
 import styles from "./Header.module.scss";
-import { images } from "~/assets/images";
+import { Link } from "react-router-dom";
 
+import { images } from "~/assets/images";
 import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
 import { UploadIcon, InboxIcon, MessageIcon } from "~/components/Icons";
 import Image from "~/components/Image";
-import Search from "~/components/Layout/components/Search";
+import Search from "~/layouts/components/Search";
+import config from "~/config";
 
 const cx = classNames.bind(styles);
 
@@ -96,9 +96,9 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <div className={cx("logo")}>
+        <Link to={config.routes.home} className={cx("logo")}>
           <img src={images.logo} alt="TikTok" />
-        </div>
+        </Link>
 
         {/* Search */}
         <Search />
